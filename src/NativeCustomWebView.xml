@@ -8,9 +8,17 @@
     <icon/>
     <properties>
         <propertyGroup caption="General">
-            <property key="url" type="textTemplate" required="true">
+            <property key="url" type="textTemplate">
                 <caption>URL</caption>
                 <description>The URL of the web page to be loaded.</description>
+            </property>
+            <property key="incognito" type="boolean" defaultValue="false">
+                <caption>Incognito</caption>
+                <description>Does not store any data within the lifetime of the WebView.</description>
+            </property>
+            <property key="cacheEnabled" type="boolean" defaultValue="true">
+                <caption>Cache enabled</caption>
+                <description>Sets whether WebView should use browser caching.</description>
             </property>
             <property key="regexInclude" type="textTemplate" required="false">
                 <caption>Callback Regex include</caption>

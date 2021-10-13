@@ -9,6 +9,8 @@ export interface NativeCustomWebViewProps<Style> {
     name: string;
     style: Style[];
     url: DynamicValue<string>;
+    incognito: boolean;
+    cacheEnabled: boolean;
     regexInclude?: DynamicValue<string>;
     regexExclude?: DynamicValue<string>;
     regexOnLoadInclude?: DynamicValue<string>;
@@ -22,6 +24,8 @@ export interface NativeCustomWebViewPreviewProps {
     class: string;
     style: string;
     url: string;
+    incognito: boolean;
+    cacheEnabled: boolean;
     regexInclude: string;
     regexExclude: string;
     regexOnLoadInclude: string;

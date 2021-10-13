@@ -60,6 +60,8 @@ export class NativeCustomWebView extends Component<NativeCustomWebViewProps<Cust
                             width: "100%",
                             height: "100%"
                         }}
+                        incognito={this.props.incognito}
+                        cacheEnabled={this.props.cacheEnabled}
                         onLoadEnd={this.onLoadHandler}
                         onError={this.onErrorHandler}
                         onNavigationStateChange={this.onNavigationStateChangeHandler}
