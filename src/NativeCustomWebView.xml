@@ -32,9 +32,9 @@
                 <caption>Onload Regex include</caption>
                 <description>A Regex that searches the navigation url where the pattern should exist in the url. If the pattern does exists, the On Load event is triggered. If this property is empty on load will trigger always.</description>
             </property>
-            <property key="callback" type="attribute" >
-                <caption>Callback</caption>
-                <description>The received callback, for example from SSO.</description>
+            <property key="callbackUrl" type="attribute" >
+                <caption>Callback URL</caption>
+                <description>The received callback URL, for example from SSO.</description>
                 <attributeTypes>
                     <attributeType name="String"/>
                 </attributeTypes>

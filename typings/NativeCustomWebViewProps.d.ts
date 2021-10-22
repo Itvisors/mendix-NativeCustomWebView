@@ -14,7 +14,7 @@ export interface NativeCustomWebViewProps<Style> {
     regexInclude?: DynamicValue<string>;
     regexExclude?: DynamicValue<string>;
     regexOnLoadInclude?: DynamicValue<string>;
-    callback: EditableValue<string>;
+    callbackUrl: EditableValue<string>;
     onLoad?: ActionValue;
     onError?: ActionValue;
     onCallback?: ActionValue;
@@ -29,7 +29,7 @@ export interface NativeCustomWebViewPreviewProps {
     regexInclude: string;
     regexExclude: string;
     regexOnLoadInclude: string;
-    callback: string;
+    callbackUrl: string;
     onLoad: {} | null;
     onError: {} | null;
     onCallback: {} | null;

@@ -116,7 +116,7 @@ export class NativeCustomWebView extends Component<NativeCustomWebViewProps<Cust
             currentUrl: url
         });
 
-        // console.info("NativeCustomWebView.onNavigationStateChange URL: " + url);
+        console.info("NativeCustomWebView.onNavigationStateChange URL: " + url);
         let includes = true;
         let excludes = false;
         if (this.props.regexInclude && this.props.regexInclude.value) {
@@ -127,7 +127,7 @@ export class NativeCustomWebView extends Component<NativeCustomWebViewProps<Cust
         }
         // console.info("NativeCustomWebView.onNavigationStateChange includes, excludes: " + includes + ", " + excludes);
         if (includes && !excludes) {
-            this.props.callback.setTextValue(url);
+            this.props.callbackUrl.setTextValue(url);
             this.onCallbackHandler();
             if (this.webview) {
                 // console.info("loading stopped");
