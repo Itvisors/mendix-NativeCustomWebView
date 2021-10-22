@@ -20,7 +20,7 @@ public class TestData
 	 */
 	public enum MemberNames
 	{
-		CallbackData("CallbackData");
+		CallbackUrl("CallbackUrl");
 
 		private java.lang.String metaName;
 
@@ -108,39 +108,39 @@ public class TestData
 		com.mendix.core.Core.delete(context, getMendixObject());
 	}
 	/**
-	 * @return value of CallbackData
+	 * @return value of CallbackUrl
 	 */
-	public final java.lang.String getCallbackData()
+	public final java.lang.String getCallbackUrl()
 	{
-		return getCallbackData(getContext());
+		return getCallbackUrl(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of CallbackData
+	 * @return value of CallbackUrl
 	 */
-	public final java.lang.String getCallbackData(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.lang.String getCallbackUrl(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.CallbackData.toString());
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.CallbackUrl.toString());
 	}
 
 	/**
-	 * Set value of CallbackData
-	 * @param callbackdata
+	 * Set value of CallbackUrl
+	 * @param callbackurl
 	 */
-	public final void setCallbackData(java.lang.String callbackdata)
+	public final void setCallbackUrl(java.lang.String callbackurl)
 	{
-		setCallbackData(getContext(), callbackdata);
+		setCallbackUrl(getContext(), callbackurl);
 	}
 
 	/**
-	 * Set value of CallbackData
+	 * Set value of CallbackUrl
 	 * @param context
-	 * @param callbackdata
+	 * @param callbackurl
 	 */
-	public final void setCallbackData(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String callbackdata)
+	public final void setCallbackUrl(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String callbackurl)
 	{
-		getMendixObject().setValue(context, MemberNames.CallbackData.toString(), callbackdata);
+		getMendixObject().setValue(context, MemberNames.CallbackUrl.toString(), callbackurl);
 	}
 
 	/**

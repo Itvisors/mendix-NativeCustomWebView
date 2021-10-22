@@ -5,19 +5,32 @@
  */
 import { ActionValue, DynamicValue, EditableValue } from "mendix";
 
+export interface CallbackListType {
+    regexInclude?: DynamicValue<string>;
+    regexExclude?: DynamicValue<string>;
+    stopLoading: boolean;
+    callbackUrl: EditableValue<string>;
+    onCallback?: ActionValue;
+}
+
+export interface CallbackListPreviewType {
+    regexInclude: string;
+    regexExclude: string;
+    stopLoading: boolean;
+    callbackUrl: string;
+    onCallback: {} | null;
+}
+
 export interface NativeCustomWebViewProps<Style> {
     name: string;
     style: Style[];
     url: DynamicValue<string>;
     incognito: boolean;
     cacheEnabled: boolean;
-    regexInclude?: DynamicValue<string>;
-    regexExclude?: DynamicValue<string>;
     regexOnLoadInclude?: DynamicValue<string>;
-    callback: EditableValue<string>;
+    callbackList: CallbackListType[];
     onLoad?: ActionValue;
     onError?: ActionValue;
-    onCallback?: ActionValue;
 }
 
 export interface NativeCustomWebViewPreviewProps {
@@ -26,11 +39,8 @@ export interface NativeCustomWebViewPreviewProps {
     url: string;
     incognito: boolean;
     cacheEnabled: boolean;
-    regexInclude: string;
-    regexExclude: string;
     regexOnLoadInclude: string;
-    callback: string;
+    callbackList: CallbackListPreviewType[];
     onLoad: {} | null;
     onError: {} | null;
-    onCallback: {} | null;
 }

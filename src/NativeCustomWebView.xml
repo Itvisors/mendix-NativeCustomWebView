@@ -20,24 +20,40 @@
                 <caption>Cache enabled</caption>
                 <description>Sets whether WebView should use browser caching.</description>
             </property>
-            <property key="regexInclude" type="textTemplate" required="false">
-                <caption>Callback Regex include</caption>
-                <description>A Regex that searches the navigation url where the pattern should exist in the url. If the pattern exists (together with the Regex exclude), the On Callback event is triggered.</description>
-            </property>
-            <property key="regexExclude" type="textTemplate" required="false">
-                <caption>Callback Regex exclude</caption>
-                <description>A Regex that searches the navigation url where the pattern should not exist in the url. If the pattern does not exist (together with the Regex include), the On Callback event is triggered.</description>
-            </property>
             <property key="regexOnLoadInclude" type="textTemplate" required="false">
                 <caption>Onload Regex include</caption>
                 <description>A Regex that searches the navigation url where the pattern should exist in the url. If the pattern does exists, the On Load event is triggered. If this property is empty on load will trigger always.</description>
             </property>
-            <property key="callback" type="attribute" >
-                <caption>Callback</caption>
-                <description>The received callback, for example from SSO.</description>
-                <attributeTypes>
-                    <attributeType name="String"/>
-                </attributeTypes>
+            <property key="callbackList" type="object" isList="true">
+                <caption>Callback definitions</caption>
+                <description></description>
+                <properties>
+                    <propertyGroup caption="Callback definition">
+                        <property key="regexInclude" type="textTemplate" required="false">
+                            <caption>Callback Regex include</caption>
+                            <description>A Regex that searches the navigation url where the pattern should exist in the url. If the pattern exists (together with the Regex exclude), the On Callback event is triggered.</description>
+                        </property>
+                        <property key="regexExclude" type="textTemplate" required="false">
+                            <caption>Callback Regex exclude</caption>
+                            <description>A Regex that searches the navigation url where the pattern should not exist in the url. If the pattern does not exist (together with the Regex include), the On Callback event is triggered.</description>
+                        </property>
+                        <property key="stopLoading" type="boolean" defaultValue="false">
+                            <caption>Stop loading</caption>
+                            <description>Stop loading the page when this callback is matched</description>
+                        </property>
+                        <property key="callbackUrl" type="attribute" >
+                            <caption>Callback URL</caption>
+                            <description>The received URL, for example from SSO.</description>
+                            <attributeTypes>
+                                <attributeType name="String"/>
+                            </attributeTypes>
+                        </property>
+                        <property key="onCallback" type="action" required="false">
+                            <caption>On callback</caption>
+                            <description/>
+                        </property>
+                    </propertyGroup>
+                </properties>
             </property>
         </propertyGroup>
         <propertyGroup caption="Events">
@@ -47,10 +63,6 @@
             </property>
             <property key="onError" type="action" required="false">
                 <caption>On error</caption>
-                <description/>
-            </property>
-            <property key="onCallback" type="action" required="false">
-                <caption>On callback</caption>
                 <description/>
             </property>
         </propertyGroup>        
