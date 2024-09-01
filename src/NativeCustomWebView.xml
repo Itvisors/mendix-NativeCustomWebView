@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Native Custom Web View</name>
     <description>Native custom web view</description>
-    <icon/>
+    <studioProCategory>Display</studioProCategory>
     <properties>
         <propertyGroup caption="General">
             <property key="url" type="textTemplate">

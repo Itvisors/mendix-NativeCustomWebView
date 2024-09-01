@@ -30,6 +30,7 @@ export interface NativeCustomWebViewPreviewProps {
     style: string;
     styleObject?: CSSProperties;
     readOnly: boolean;
+    renderMode?: "design" | "xray" | "structure";
     url: string;
     incognito: boolean;
     cacheEnabled: boolean;

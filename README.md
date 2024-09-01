@@ -1,17 +1,13 @@
 ## NativeCustomWebView
-[Native custom web view]
+Native Custom Webview, useful for SSO flow without leaving the native app
 
 ## Features
-[feature highlights]
+- React to the page loaded
+- React to specific callback URL
+- Receive the callback URL as attribute value
 
 ## Usage
-[step by step instructions]
-
-## Demo project
-[link to sandbox]
-
-## Issues, suggestions and feature requests
-[link to GitHub issues]
-
-## Development and contribution
-[specify contribute]
+- Place it on a native page
+- Configure the include and (optinally) the exclude callback regexes to capture the callback URL
+- Specify the callback URL attribute and action
+- Handle the callback in your logic or pass it to MobileSSO
