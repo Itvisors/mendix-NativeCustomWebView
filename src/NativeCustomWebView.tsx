@@ -28,7 +28,6 @@ export class NativeCustomWebView extends Component<NativeCustomWebViewProps<Cust
 
     private readonly onLoadHandler = this.onLoad.bind(this);
     private readonly onErrorHandler = this.onError.bind(this);
-    private readonly onCallbackHandler = this.onCallback.bind(this);
     private readonly onNavigationStateChangeHandler = this.onNavigationStateChange.bind(this);
 
     private webview: RNWebView | null = null;
@@ -97,10 +96,6 @@ export class NativeCustomWebView extends Component<NativeCustomWebViewProps<Cust
         this.executeAction(this.props.onError);
     }
 
-    private onCallback(): void {
-        this.executeAction(this.props.onCallback);
-    }
-
     private onNavigationStateChange(newNavState: WebViewNavigation): void {
         // newNavState looks something like this:
         // {
@@ -127,8 +122,12 @@ export class NativeCustomWebView extends Component<NativeCustomWebViewProps<Cust
         }
         // console.info("NativeCustomWebView.onNavigationStateChange includes, excludes: " + includes + ", " + excludes);
         if (includes && !excludes) {
-            this.props.callbackUrl.setTextValue(url);
-            this.onCallbackHandler();
+            const { onCallback } = this.props;
+            if (onCallback && onCallback.canExecute && !onCallback.isExecuting) {
+                onCallback.execute({
+                    callbackUrl: url
+                });
+            }
             if (this.webview) {
                 // console.info("loading stopped");
                 if (this.webview) {

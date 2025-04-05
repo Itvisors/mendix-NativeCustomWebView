@@ -4,7 +4,7 @@
  * @author Mendix Widgets Framework Team
  */
 import { CSSProperties } from "react";
-import { ActionValue, DynamicValue, EditableValue } from "mendix";
+import { ActionValue, DynamicValue, Option } from "mendix";
 
 export interface NativeCustomWebViewProps<Style> {
     name: string;
@@ -15,10 +15,9 @@ export interface NativeCustomWebViewProps<Style> {
     regexInclude?: DynamicValue<string>;
     regexExclude?: DynamicValue<string>;
     regexOnLoadInclude?: DynamicValue<string>;
-    callbackUrl: EditableValue<string>;
     onLoad?: ActionValue;
     onError?: ActionValue;
-    onCallback?: ActionValue;
+    onCallback?: ActionValue<{ callbackUrl: Option<string> }>;
 }
 
 export interface NativeCustomWebViewPreviewProps {
@@ -38,7 +37,6 @@ export interface NativeCustomWebViewPreviewProps {
     regexInclude: string;
     regexExclude: string;
     regexOnLoadInclude: string;
-    callbackUrl: string;
     onLoad: {} | null;
     onError: {} | null;
     onCallback: {} | null;
