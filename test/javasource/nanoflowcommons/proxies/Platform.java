@@ -6,27 +6,25 @@ package nanoflowcommons.proxies;
 
 public enum Platform
 {
-	Web(new java.lang.String[][] { new java.lang.String[] { "en_US", "Web" } }),
-	Native_mobile(new java.lang.String[][] { new java.lang.String[] { "en_US", "Native mobile" } }),
-	Hybrid_mobile(new java.lang.String[][] { new java.lang.String[] { "en_US", "Hybrid mobile" } });
+	Web("e88955b5-a380-4a26-a275-3b525ac76305"),
+	Native_mobile("206eb13e-e088-4f5d-a244-b25deab22faa"),
+	Hybrid_mobile("a047c751-b91c-4637-bb41-4fc3583762ea");
 
-	private final java.util.Map<java.lang.String, java.lang.String> captions;
-
-	private Platform(java.lang.String[][] captionStrings)
+	private final java.lang.String i18nCaptionKey;
+	
+	private Platform(java.lang.String i18nCaptionKey)
 	{
-		this.captions = new java.util.HashMap<>();
-		for (java.lang.String[] captionString : captionStrings) {
-			captions.put(captionString[0], captionString[1]);
-		}
+		this.i18nCaptionKey = i18nCaptionKey;
 	}
 
 	public java.lang.String getCaption(java.lang.String languageCode)
 	{
-		return captions.getOrDefault(languageCode, "en_US");
+		String caption = com.mendix.core.Core.getInternationalizedString(languageCode, i18nCaptionKey);
+		return caption.isEmpty() ? getCaption() : caption;
 	}
 
 	public java.lang.String getCaption()
 	{
-		return captions.get("en_US");
+		return com.mendix.core.Core.getInternationalizedString("en_US", i18nCaptionKey);
 	}
 }
