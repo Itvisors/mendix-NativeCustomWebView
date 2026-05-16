@@ -126,7 +126,7 @@ export async function TakePictureAdvanced(picture, pictureSource, pictureQuality
                 const filename = /[^\/]*$/.exec(uri)[0];
                 const filePathWithoutFileScheme = uri.replace("file://", "");
                 mx.data.saveDocument(imageObject.getGuid(), filename, {}, blob, async () => {
-                    await NativeModules.NativeFsModule.remove(filePathWithoutFileScheme);
+                    await NativeModules.MendixNative.fsRemove(filePathWithoutFileScheme);
                     imageObject.set("Name", filename);
                     mx.data.commit({
                         mxobj: imageObject,
@@ -134,7 +134,7 @@ export async function TakePictureAdvanced(picture, pictureSource, pictureQuality
                         error: (error) => reject(error)
                     });
                 }, async (error) => {
-                    await NativeModules.NativeFsModule.remove(filePathWithoutFileScheme);
+                    await NativeModules.MendixNative.fsRemove(filePathWithoutFileScheme);
                     reject(error);
                 });
             })

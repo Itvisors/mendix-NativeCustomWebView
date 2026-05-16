@@ -40,7 +40,11 @@ public enum WorkflowEventType
 	MultiUserTaskOutcomeSelected("f024ad0a-e845-4926-8623-106bb4cdc496"),
 	UserTaskEnded("ffca9fd8-d7e1-4992-87b9-613bb947b773"),
 	NonInterruptingTimerEventExecuted("a7735eae-518a-4e24-b81f-1f2f34378c1f"),
-	InterruptingTimerEventExecuted("c209cca5-c73b-4205-a7ea-755b189e7db0");
+	InterruptingTimerEventExecuted("c209cca5-c73b-4205-a7ea-755b189e7db0"),
+	NonInterruptingNotificationEventSubProcessStartExecuted("9eb6782f-a50d-44c6-aa97-405c719886f8"),
+	AIAgentTaskStarted("37908085-c75f-47d8-a40a-74ccdf2d2bb2"),
+	AIAgentTaskEnded("c965c773-9d1d-47ed-8326-3d1972d53625"),
+	InterruptingNotificationEventSubProcessStartExecuted("ee312f08-3d13-4e0d-9349-44bc0fe52835");
 
 	private final java.lang.String i18nCaptionKey;
 	

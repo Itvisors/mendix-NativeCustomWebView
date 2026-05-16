@@ -21,7 +21,10 @@ public enum WorkflowActivityType
 	WaitForTimer("8e0b84c7-1b56-4d53-92ac-784990877ba7"),
 	EndOfBoundaryEventPath("363dfddc-69cb-41cd-af71-a8b0d0b324e8"),
 	NonInterruptingTimerEvent("a40a215e-3540-4a3c-8633-8de4e88999bf"),
-	InterruptingTimerEvent("28780d21-22b2-4880-b559-35348cdee5af");
+	InterruptingTimerEvent("28780d21-22b2-4880-b559-35348cdee5af"),
+	NonInterruptingNotificationEventSubProcessStart("6c366462-10ce-4ec7-b308-8ce9827ed755"),
+	AIAgentTask("2fa288dd-aaf1-4657-ac4f-4aab201333b8"),
+	InterruptingNotificationEventSubProcessStart("54486bf1-eac4-471c-8227-6c28006dfffa");
 
 	private final java.lang.String i18nCaptionKey;
 	

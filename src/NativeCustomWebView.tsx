@@ -1,4 +1,4 @@
-import { Component, ReactNode, createElement } from "react";
+import { Component, ReactNode } from "react";
 import { View, TextStyle, ViewStyle } from "react-native";
 import { WebView as RNWebView, WebViewNavigation } from "react-native-webview";
 import { ActionValue } from "mendix";
@@ -52,7 +52,9 @@ export class NativeCustomWebView extends Component<NativeCustomWebViewProps<Cust
             this.shouldRender && uri ? (
                 <View style={styles.container}>
                     <RNWebView
-                        ref={ref => (this.webview = ref)}
+                        ref={ref => {
+                            this.webview = ref;
+                        }}
                         testID={this.props.name}
                         source={{ uri: uri! }}
                         style={{

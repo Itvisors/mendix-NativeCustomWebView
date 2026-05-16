@@ -6,9 +6,9 @@ package nanoflowcommons.proxies;
 
 public enum Enum_DistanceUnit
 {
-	KILOMETER("340f4db4-77af-47fc-92c7-78b8f77e094b"),
-	STATUTE_MILE("6c5cd962-f49b-4528-95f4-96ecb148db25"),
-	NAUTICAL_MILE("e7d91ebe-e4d0-44e8-afbb-5809b476d496");
+	KILOMETER("1a99413a-95fb-4fab-8fb9-27eafcb0633f"),
+	STATUTE_MILE("39c76bdb-d6b9-45a2-813c-59412e6590f9"),
+	NAUTICAL_MILE("5b75fb96-dff8-4198-bf07-3a57e0720c22");
 
 	private final java.lang.String i18nCaptionKey;
 	
