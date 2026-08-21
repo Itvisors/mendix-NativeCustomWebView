@@ -24,6 +24,18 @@
       "name": "Combo box",
       "version": "2.8.1",
       "appStoreVersionGuid": "147c8275-7a43-4ded-969d-b6196d09c0bc"
+    },
+    {
+      "sha-256": "5b565d39721447414b5a1416417b04beb6d2a6a7c4a98e9b4acb516c633fda3a",
+      "name": "Combobox",
+      "version": "2.9.0",
+      "appStoreVersionGuid": "dce845f4-d051-4161-847c-016c01703caa"
+    },
+    {
+      "sha-256": "16c96fae6f7029336903081cb78b9269a3d816388f2c607225004bd976b82ed9",
+      "name": "Image",
+      "version": "1.6.1",
+      "appStoreVersionGuid": "f65dd975-34f7-4a58-98a8-b8f486ea3c2d"
     }
   ]
 }

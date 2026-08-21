@@ -1,7 +1,7 @@
 {
   "name": "nativecustomwebview",
   "widgetName": "NativeCustomWebView",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Native custom web view",
   "copyright": "ITvisors 2021",
   "author": "Marcel Groeneweg",
@@ -23,21 +23,23 @@
     "url": "https://github.com/Marcel Groeneweg/nativecustomwebview/issues"
   },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "11.8.1"
+    "@mendix/pluggable-widgets-tools": "11.12.1"
   },
   "dependencies": {
     "react-native-webview": "13.16.1"
   },
   "resolutions": {
-    "react": "19.0.0",
-    "react-native": "0.78.2",
-    "@types/react": "19.0.0",
-    "@types/react-native": "0.78.2"
+    "react": "19.2.3",
+    "react-native": "0.84.1",
+    "react-dom": "19.2.3",
+    "@types/react": "19.2.3",
+    "@types/react-dom": "19.2.3"
   },
   "overrides": {
-    "react": "19.0.0",
-    "react-native": "0.78.2",
-    "@types/react": "19.0.0",
-    "@types/react-native": "0.78.2"
+    "react": "19.2.3",
+    "react-native": "0.84.1",
+    "react-dom": "19.2.3",
+    "@types/react": "19.2.3",
+    "@types/react-dom": "19.2.3"
   }
 }
